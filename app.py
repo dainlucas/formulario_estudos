@@ -31,13 +31,23 @@ with aba1:
 
     # Se estudou
     if status == "Estudei":
-        materias = st.multiselect("Quais matérias?", ["Matemática", "Física", "Redação", "Português"])
-        turno = st.radio("Turno predominante:", ["Manhã", "Tarde", "Noite"])
+        col_mat, col_turno = st.columns([2, 1])
+        with col_mat:
+            materias = st.multiselect("Quais matérias você estudou?", ["Matemática", "Física", "Redação", "Português"])
+        with col_turno:
+            turno = st.radio("Turno predominante:", ["Manhã", "Tarde", "Noite"])
+
+        st.markdown("#### Avaliação de Desempenho")
 
         # Etapa 03 - Escalas de volume, qualidade, foco de estudos
-        volume = st.slider("Volume de conteúdo:", 1, 5, 3)
-        qualidade = st.slider("Qualidade do aprendizado:", 1, 5, 3)
-        foco = st.slider("Nível de Foco:", 1, 5, 3)
+        # Layout em colunas para os sliders
+        c_vol, c_qual, c_foco = st.columns(3)
+        with c_vol:
+            volume = st.slider("Volume de conteúdo:", 1, 5, 3)
+        with c_qual:
+            qualidade = st.slider("Qualidade do aprendizado:", 1, 5, 3)
+        with c_foco:
+            foco = st.slider("Nível de Foco:", 1, 5, 3)
 
     # Se não estudou por falta
     elif status == "Não estudei":
