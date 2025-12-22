@@ -2,8 +2,13 @@ import streamlit as st
 import data_manager as dm
 from datetime import datetime
 
+st.set_page_config(page_title="Relatório de Estudos", layout="centered")
 st.title("Relatório de Estudos")
 aba1, aba2 = st.tabs(["💻 Relatório", "📅 Histórico"])
+
+# CSS PERSONALIZADO
+with open("style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Variaveis vazias para evitar erros
 materias = []

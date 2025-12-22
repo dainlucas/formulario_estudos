@@ -1,0 +1,103 @@
+/* Fundo geral da aplicação */
+.stApp {
+    background-color: #0E1117;
+    /* Dark Charcoal */
+    color: #FAFAFA;
+    /* Texto claro */
+}
+
+/* Card Principal */
+.block-container {
+    background-color: #262730;
+    /* Surface Dark */
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra mais marcada para contraste */
+    margin-top: 2rem;
+    max-width: 800px;
+    border: 1px solid #303030;
+    /* Borda sutil */
+}
+
+/* Títulos e Subtítulos */
+h1 {
+    color: #FAFAFA;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: #E0E0E0;
+    /* Cinza bem claro */
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid #404040;
+    /* Linha divisória mais escura */
+    padding-bottom: 0.5rem;
+}
+
+h4 {
+    color: #B0B0B0;
+    /* Cinza médio */
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+/* Botões */
+.stButton>button {
+    background-color: #3498db;
+    /* Azul original funciona bem no dark */
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.stButton>button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Inputs e Widgets (Adaptação para Dark)
+   Streamlit já tenta adaptar, mas podemos forçar algumas cores se necessário.
+   Por enquanto, confiamos no tema do Streamlit + nosso container dark.
+*/
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 24px;
+    justify-content: center;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 50px;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #B0B0B0;
+    /* Texto tab inativo */
+    font-weight: 600;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: transparent;
+    color: #3498db;
+    /* Azul destaque */
+    border-bottom: 3px solid #3498db;
+}
+
+/* Melhora a legibilidade de textos gerais dentro do card */
+p,
+li,
+span {
+    color: #E0E0E0;
+}
