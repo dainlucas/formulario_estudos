@@ -3,3 +3,4 @@ __pycache__/
 .venv/
 .vscode/
 .idea/
+reports/dados_estudos.csv
